@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block titulo %}Bienvenidos al Login{% endblock %}
+
+{% block contenido %}
+<h1>Bienvenidos</h1>
+
+<div class="row mt-4">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+
+        <form action="/procesar_login" method="post">
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                <div id="emailHelp" class="form-text">No compartas la clave con nadie.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar al Sistema!</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
